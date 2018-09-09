@@ -9,6 +9,12 @@ import java.util.HashMap;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  *
+ *给定一个目标数
+ *在一个数组中搜索 某索引值 + 另个索引值
+ *例如 目标值18 ，数组 {2,6,7,11,15}
+ *只能得出11+7 =18 
+ *而不能得出6+6+6 =18
+ *最后把数组中的两个值的【索引值】放入到新数组中
  */
 
 public class TwoSum {
@@ -34,7 +40,7 @@ public class TwoSum {
             
             if(res.containsKey(temp)){// 2、compare res.containsKey(temp)
                 result[0] = res.get(temp); //get Index of a number
-                result[1] = i;             //3 get current number
+                result[1] = i;             //3 get Index of this current array number
 
             }else{
                 res.put(nums[i],i);  //1、 put into hashmap
